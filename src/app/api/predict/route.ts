@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
         const prediction = predict(patient);
         const explanation = await getGeminiExplanation(patient, prediction);
         const fullResult = { ...prediction, explanation };
-        await savePrediction(patient as unknown as Record<string, unknown>, fullResult as unknown as Record<string, unknown>);
+        await savePrediction(patient as unknown as { [key: string]: unknown }, fullResult as unknown as { [key: string]: unknown });
         return NextResponse.json(fullResult);
     } catch (e) {
         return NextResponse.json({ error: String(e) }, { status: 500 });

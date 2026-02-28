@@ -13,7 +13,7 @@ interface Record {
     created_at: string;
 }
 
-const PILL_CLASS: Record<string, string> = {
+const PILL_CLASS: { [key: string]: string } = {
     "Low Risk": "low", "Moderate Risk": "moderate",
     "High Risk": "high", "Critical Risk": "critical",
 };

@@ -5,7 +5,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
-export async function savePrediction(patientData: Record<string, unknown>, result: Record<string, unknown>) {
+export async function savePrediction(patientData: { [key: string]: unknown }, result: { [key: string]: unknown }) {
     try {
         const { data, error } = await supabase
             .from("predictions")

@@ -20,11 +20,11 @@ export interface PredictionResult {
   risk_color: string;
   probability: number;
   top_factors: { feature: string; importance: number }[];
-  feature_importances: Record<string, number>;
+  feature_importances: { [key: string]: number };
 }
 
-const GENDER_MAP: Record<string, number> = { Female: 0, Male: 1, Other: 0.5 };
-const SMOKING_MAP: Record<string, number> = {
+const GENDER_MAP: { [key: string]: number } = { Female: 0, Male: 1, Other: 0.5 };
+const SMOKING_MAP: { [key: string]: number } = {
   "No Info": 0, never: 1, former: 2, "not current": 2, ever: 3, current: 4,
 };
 
@@ -69,7 +69,7 @@ export function predict(patient: PatientInput): PredictionResult {
   else if (risk_score < 70) { risk_label = "High Risk"; risk_color = "orange"; }
   else { risk_label = "Critical Risk"; risk_color = "red"; }
 
-  const feature_importances = modelData.feature_importances as Record<string, number>;
+  const feature_importances = modelData.feature_importances as { [key: string]: number };
   const top_factors = Object.entries(feature_importances)
     .map(([feature, importance]) => ({ feature, importance }))
     .sort((a, b) => b.importance - a.importance)
