@@ -51,7 +51,7 @@ export default function HomePage() {
           </div>
           <div className="hero-content">
             <div className="badge">
-              <span>🏥</span> Praxis 2.0 · PS1 · GDG GB Pant
+              <span>🏥</span> Praxis 2.0 · PS1 · Clinical Decision Support
             </div>
             <h1 className="hero-title">
               Predict Diabetes Risk<br />with <span>AI Precision</span>
@@ -119,7 +119,7 @@ export default function HomePage() {
               <div className="logo-dot" />
               <span>ClinicalAI</span>
             </div>
-            <p className="footer-text">Praxis 2.0 · GDG on Campus GB Pant · Built with ML + Gemini</p>
+            <p className="footer-text">Praxis 2.0 · Built with ML + Gemini AI</p>
           </div>
         </div>
       </footer>

@@ -3,7 +3,7 @@ import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "ClinicalAI — Diabetes Risk Assessment",
-  description: "AI-powered diabetes risk prediction using Machine Learning and Gemini AI. Built for Praxis 2.0 by GDG GB Pant.",
+  description: "AI-powered diabetes risk prediction using Machine Learning and Gemini AI. Built for Praxis 2.0.",
   keywords: "diabetes, risk assessment, AI, machine learning, clinical decision support, Gemini",
 };
 
