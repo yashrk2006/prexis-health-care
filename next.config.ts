@@ -1,11 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true,  // Skip ESLint on Vercel build
-  },
-  typescript: {
-    ignoreBuildErrors: false,  // Keep TypeScript checks
+    ignoreDuringBuilds: true,
   },
 };
 
