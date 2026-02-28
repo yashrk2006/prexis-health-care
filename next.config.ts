@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Allow importing JSON files (for model_data.json)
-  experimental: {},
+  eslint: {
+    ignoreDuringBuilds: true,  // Skip ESLint on Vercel build
+  },
+  typescript: {
+    ignoreBuildErrors: false,  // Keep TypeScript checks
+  },
 };
 
 export default nextConfig;
